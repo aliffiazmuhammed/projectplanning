@@ -10,7 +10,8 @@
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
     "dev:api": "npm run dev --workspace=apps/api",
     "dev:web": "npm run dev --workspace=apps/web",
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspace=@project-planner/schemas && npm run build --workspace=@project-planner/types && npm run build --workspace=@project-planner/api && npm run build --workspace=@project-planner/web",
+    "start": "npm run start --workspace=@project-planner/api",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "devDependencies": {
