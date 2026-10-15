@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import fs from 'node:fs';
 import { env } from './config/env.js';
 import { connectDB } from './config/db.js';
 import { logger } from './config/logger.js';
@@ -41,6 +44,22 @@ async function main(): Promise<void> {
   app.get('/api/health', (_req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
   });
+
+  // Static frontend assets in production (if built)
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+  const webDistPath = path.resolve(__dirname, '../../web/dist');
+
+  if (fs.existsSync(webDistPath)) {
+    logger.info({ webDistPath }, 'Serving static web client in production');
+    app.use(express.static(webDistPath));
+    app.get('*', (req, res, next) => {
+      if (req.path.startsWith('/api')) {
+        return next();
+      }
+      res.sendFile(path.join(webDistPath, 'index.html'));
+    });
+  }
 
   // Error handler (must be last)
   app.use(errorHandler);
