@@ -843,9 +843,7 @@ export default function HomePage() {
       <footer className="border-t border-slate-800/80 bg-slate-950 py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-white" />
-            </div>
+            <img src="/favicon.svg" alt="PlanCraft AI Logo" className="w-7 h-7 rounded-lg shadow-sm" />
             <span className="font-bold text-slate-300 text-sm">
               PlanCraft<span className="text-cyan-400">.ai</span>
             </span>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Glowing Border -->
+    <linearGradient id="logoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Deep Ambient Glow -->
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.45" />
+      <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#8b5cf6" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Primary Astroid Star Gradient -->
+    <linearGradient id="primaryStar" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="30%" stop-color="#60a5fa" />
+      <stop offset="60%" stop-color="#818cf8" />
+      <stop offset="85%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <!-- Secondary Satellite Sparkle -->
+    <linearGradient id="satelliteStar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#a5f3fc" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Inner Core Sheen -->
+    <radialGradient id="centerSheen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#a5f3fc" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Squircle Base with Deep Shadow -->
+  <rect width="512" height="512" rx="128" fill="url(#logoBg)" />
+  <rect width="496" height="496" x="8" y="8" rx="120" fill="none" stroke="url(#logoBorder)" stroke-width="6" opacity="0.8" />
+
+  <!-- Core Ambient Glow Disk -->
+  <circle cx="256" cy="256" r="210" fill="url(#logoGlow)" />
+
+  <!-- Architectural Neural Graph Connections -->
+  <g opacity="0.45" stroke="#6366f1" stroke-width="2.5" stroke-dasharray="6 6">
+    <line x1="130" y1="380" x2="256" y2="256" />
+    <line x1="382" y1="380" x2="256" y2="256" />
+    <line x1="130" y1="380" x2="382" y2="380" />
+  </g>
+  <circle cx="130" cy="380" r="10" fill="#38bdf8" opacity="0.8" />
+  <circle cx="382" cy="380" r="10" fill="#c084fc" opacity="0.8" />
+  <circle cx="256" cy="380" r="6" fill="#6366f1" opacity="0.6" />
+
+  <!-- Primary Celestial Astroid Star (Signature Gemini Architecture) -->
+  <path 
+    d="M 256,76 
+       C 256,172 178,250 82,250 
+       C 178,250 256,328 256,424 
+       C 256,328 334,250 430,250 
+       C 334,250 256,172 256,76 Z" 
+    fill="url(#primaryStar)" 
+  />
+
+  <!-- Secondary Satellite Spark -->
+  <path 
+    d="M 378,88 
+       C 378,124 350,152 314,152 
+       C 350,152 378,180 378,216 
+       C 378,180 406,152 442,152 
+       C 406,152 378,124 378,88 Z" 
+    fill="url(#satelliteStar)" 
+  />
+
+  <!-- Brilliant Center Core Star Burst -->
+  <circle cx="256" cy="250" r="28" fill="url(#centerSheen)" />
+  <circle cx="256" cy="250" r="8" fill="#ffffff" />
+</svg>

@@ -25,11 +25,11 @@ export default function App() {
               to="/" 
               className="flex items-center gap-3 group transition-transform active:scale-[0.98]"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-600 to-violet-600 p-[1px] shadow-glow flex items-center justify-center">
-                <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center group-hover:bg-transparent transition-colors">
-                  <Sparkles className="w-4 h-4 text-cyan-400 group-hover:text-white transition-colors" />
-                </div>
-              </div>
+              <img 
+                src="/favicon.svg" 
+                alt="PlanCraft AI Logo" 
+                className="w-9 h-9 rounded-xl shadow-glow group-hover:scale-105 transition-transform" 
+              />
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-base tracking-tight text-white group-hover:text-cyan-300 transition-colors">
