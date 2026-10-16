@@ -36,7 +36,7 @@ export const SignupPage: React.FC = () => {
         email: email.trim(),
         password,
       });
-      navigate('/', { replace: true });
+      navigate('/projects', { replace: true });
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Registration failed. Please try again.');
     } finally {

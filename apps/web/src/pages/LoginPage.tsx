@@ -13,7 +13,8 @@ export const LoginPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const from = (location.state as any)?.from?.pathname || '/';
+  const rawFrom = (location.state as any)?.from?.pathname;
+  const from = (rawFrom && rawFrom !== '/') ? rawFrom : '/projects';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
